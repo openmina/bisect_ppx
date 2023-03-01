@@ -81,6 +81,8 @@ val runtime_data_to_string : unit -> string option
     normally shouldn't happen, but it can occur depending on the quality of the
     integration between the build system and Bisect. *)
 
+val runtime_coverage_flattened: unit -> instrumented_file list
+
 val reset_counters : unit -> unit
 (** Clears accumulated visit counts. All array cells are set to zero. *)
 

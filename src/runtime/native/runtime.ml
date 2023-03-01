@@ -106,6 +106,9 @@ let file_channel () =
   in
   create_file ()
 
+let get_coverage_flattened =
+  Common.runtime_coverage_flattened
+
 let reset_counters =
   Common.reset_counters
 

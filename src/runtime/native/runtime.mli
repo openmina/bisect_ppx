@@ -74,5 +74,7 @@ val dump_counters_exn : out_channel -> unit
 
     An exception is raised if writing is not successful *)
 
+val get_coverage_flattened : unit -> Bisect_common.instrumented_file list
+
 val reset_counters : unit -> unit
 (** [reset_counters ()] will reset the runtime coverage counters. *)

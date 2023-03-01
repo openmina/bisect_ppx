@@ -70,6 +70,8 @@ let flatten_coverage coverage =
 let flatten_data () =
   flatten_coverage (Lazy.force coverage)
 
+let runtime_coverage_flattened () = flatten_data ()
+
 let reset_counters () =
   Lazy.force coverage
   |> Hashtbl.iter begin fun _ {counts; _} ->
