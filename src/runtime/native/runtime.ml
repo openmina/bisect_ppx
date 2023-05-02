@@ -135,7 +135,7 @@ let dump () =
 
 let sigterm_handler (_ : int) =
   bisect_file_written := true;
-  dump ();
+  (*dump ();*)
   exit 0
 
 let dump_at_exit () =
@@ -143,11 +143,11 @@ let dump_at_exit () =
     if !sigterm_enable then begin
       ignore @@ Sys.(signal sigterm Signal_ignore);
       bisect_file_written := true;
-      dump ();
+      (*dump ();*)
       ignore @@ Sys.(signal sigterm Signal_default)
     end
     else
-      dump ()
+      (*dump ()*) ()
   end
 
 let register_dump : unit Lazy.t =
